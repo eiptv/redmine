@@ -630,6 +630,7 @@
   project_module_boards: 討論區
   project_module_calendar: 日曆
   project_module_gantt: 甘特圖
+  project_module_kanban: 看板
 
   label_user: 用戶
   label_user_plural: 用戶清單
