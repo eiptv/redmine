@@ -5,7 +5,7 @@
 
 <div class="box tabular">
 <% if @user.auth_source_id.nil? %>
-  <p><%= f.text_field :login, :size => 25, :required => true %></p>
+  <p><%= f.text_field :login, size: 25, required: true, placeholder: '實際用來登入用的名稱' %></p>
 
   <p><%= f.password_field :password, :size => 25, :required => true %>
   <em class="info"><%= l(:text_caracters_minimum, :count => Setting.password_min_length) %></em>
@@ -14,15 +14,8 @@
   <% end %>
   </p>
   <p><%= f.password_field :password_confirmation, :size => 25, :required => true %></p>
+  <p><%= f.text_field :mail, :required => true %></p>
 <% end %>
-
-<p><%= f.text_field :firstname, :required => true %></p>
-<p><%= f.text_field :lastname, :required => true %></p>
-<p><%= f.text_field :mail, :required => true %></p>
-<%= labelled_fields_for :pref, @user.pref do |pref_fields| %>
-<p><%= pref_fields.check_box :hide_mail %></p>
-<% end %>
-
 
 <% unless @user.force_default_language? %>
 <p><%= f.select :language, lang_options_for_select %></p>
