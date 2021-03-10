@@ -1,0 +1,15 @@
+[submodule "plugins/additionals"]
+	path = plugins/additionals
+	url = git@github.com:eiptv/additionals
+[submodule "plugins/additional_tags"]
+	path = plugins/additional_tags
+	url = git@github.com:eiptv/additional_tags
+[submodule "plugins/kanban"]
+	path = plugins/kanban
+	url = git@github.com:eiptv/kanban
+[submodule "plugins/redmine_knowledgebase"]
+	path = plugins/redmine_knowledgebase
+	url = git@github.com:eiptv/redmine_knowledgebase
+[submodule "plugins/redmine_issue_templates"]
+	path = plugins/redmine_issue_templates
+	url = git@github.com:eiptv/redmine_issue_templates
