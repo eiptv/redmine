@@ -14,6 +14,8 @@
   <% end %>
   </p>
   <p><%= f.password_field :password_confirmation, :size => 25, :required => true %></p>
+  <p><%= f.text_field :firstname, :required => true %></p>
+  <p><%= f.text_field :lastname, :required => true %></p>
   <p><%= f.text_field :mail, :required => true %></p>
 <% end %>
 
