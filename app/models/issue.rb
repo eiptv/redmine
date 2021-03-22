@@ -487,8 +487,7 @@ class Issue < ActiveRecord::Base
     'estimated_hours',
     'custom_field_values',
     'custom_fields',
-    'lock_version',
-    :if => lambda {|issue, user| issue.new_record? || issue.attributes_editable?(user)})
+    'lock_version')
   safe_attributes(
     'notes',
     :if => lambda {|issue, user| issue.notes_addable?(user)})
