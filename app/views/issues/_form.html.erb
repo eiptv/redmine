@@ -29,7 +29,6 @@
 <p><%= f.text_field :subject, :size => 80, :maxlength => 255, :required => true %></p>
 <% end %>
 
-<% if @issue.safe_attribute? 'description' %>
 <p>
   <%= f.label_for_field :description, :required => @issue.required_attribute?('description') %>
   <%= link_to_function content_tag(:span, l(:button_edit), :class => 'icon icon-edit'), '$(this).hide(); $("#issue_description_and_toolbar").show()' unless @issue.new_record? %>
@@ -43,7 +42,6 @@
   <% end %>
 </p>
 <%= wikitoolbar_for 'issue_description', preview_issue_path(:project_id => @issue.project, :issue_id => @issue.id) %>
-<% end %>
 
 <div id="attributes" class="attributes">
   <%= render :partial => 'issues/attributes' %>
